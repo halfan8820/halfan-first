@@ -1,0 +1,703 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+
+}
+
+/* ==========================
+BACKGROUND
+========================== */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:10;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(circle at center,#222 0%,#090909 50%,#000 100%);
+
+z-index:-5;
+
+}
+
+/* ==========================
+NAVBAR
+========================== */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+height:85px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 80px;
+
+background:rgba(0, 0, 0, 0.92);
+
+backdrop-filter:blur(15px);
+
+border-bottom:2px solid #c89d18;
+
+z-index:9999;
+
+}
+
+/* LOGO */
+
+.logo{
+
+font-size:42px;
+
+font-weight:900;
+
+color:#ffc400;
+
+letter-spacing:4px;
+
+text-shadow:
+
+0 0 10px #ffbf00,
+
+0 0 25px orange,
+
+0 0 45px gold;
+
+animation:logoGlow 2s infinite alternate;
+
+cursor:pointer;
+
+}
+
+@keyframes logoGlow{
+
+from{
+
+text-shadow:
+
+0 0 10px gold,
+
+0 0 20px orange;
+
+}
+
+to{
+
+text-shadow:
+
+0 0 30px gold,
+
+0 0 70px yellow,
+
+0 0 100px orange;
+
+}
+
+}
+
+/* MENU */
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:50px;
+
+}
+
+nav ul li a{
+
+text-decoration:none;
+
+color:#d7aa25;
+
+font-size:22px;
+
+font-weight:600;
+
+transition:.4s;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+}
+
+nav ul li a:hover{
+
+background:#d7aa25;
+
+color:black;
+
+box-shadow:
+
+0 0 15px gold,
+
+0 0 30px gold,
+
+0 0 60px gold;
+
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+height:300px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+margin-top:90px;
+
+}
+
+.hero h3{
+
+font-size:40px;
+
+letter-spacing:6px;
+
+font-weight:300;
+
+}
+
+.hero h1{
+
+font-size:120px;
+
+color:#ffcc00;
+
+font-weight:900;
+
+text-shadow:
+
+0 0 15px gold,
+
+0 0 40px orange,
+
+0 0 70px yellow;
+
+animation:titleGlow 2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.04);
+
+}
+
+}
+
+/* NEON */
+
+.underglow{
+
+position:absolute;
+
+left:120px;
+bottom:18px;
+
+width:410px;
+height:14px;
+
+background:#00ff55;
+
+filter:blur(12px);
+
+box-shadow:
+
+0 0 20px lime,
+
+0 0 50px lime,
+
+0 0 90px lime;
+
+animation:neon 1s infinite alternate;
+
+}
+
+@keyframes neon{
+
+from{
+
+opacity:.4;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* EXHAUST */
+
+.exhaust{
+
+position:absolute;
+
+left:-18px;
+bottom:60px;
+
+width:18px;
+height:12px;
+
+background:#666;
+
+border-radius:10px;
+
+}
+
+/* FIRE */
+
+.fire{
+
+position:absolute;
+
+left:-40px;
+bottom:48px;
+
+width:35px;
+height:18px;
+
+background:orange;
+
+border-radius:50%;
+
+filter:blur(3px);
+
+animation:fire .15s infinite;
+
+}
+
+@keyframes fire{
+
+0%{
+
+transform:scale(.8);
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:scale(1.4);
+
+opacity:1;
+
+}
+
+}
+
+.logo-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:450px;
+    margin-bottom:100px;
+}
+
+.halb-logo{
+    width:600px;
+    max-width:px;
+    animation:floatLogo 4s ease-in-out infinite;
+    filter:
+        drop-shadow(0 0 30px gold)
+        drop-shadow(0 0 75px #ffcc00)
+        drop-shadow(0 0 45px #000000);
+}
+
+@keyframes floatLogo{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-12px);
+}
+
+100%{
+    transform:translateY(0);
+}
+
+}
+
+.halb-logo:hover{
+
+transform:scale(1.05);
+
+transition:.5s;
+
+filter:
+drop-shadow(0 0 20px gold)
+drop-shadow(0 0 50px yellow)
+drop-shadow(0 0 80px orange);
+
+}
+
+/* ===========================
+   USER PROFILE
+=========================== */
+
+.user-menu{
+
+   position: fixed;
+    top: 18px;
+    right: 20px;
+
+
+}
+
+.user-pic{
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+cursor:pointer;
+
+border:3px solid gold;
+
+box-shadow:
+
+0 0 15px gold,
+
+0 0 30px orange;
+
+transition:.4s;
+
+object-fit:cover;
+
+}
+
+.user-pic:hover{
+
+transform:scale(1.1) rotate(5deg);
+
+box-shadow:
+
+0 0 20px gold,
+
+0 0 50px orange;
+
+}
+
+.sub-menu{
+
+position:absolute;
+
+top:75px;
+
+right:0;
+
+width:320px;
+
+background:rgba(15,15,15,.95);
+
+backdrop-filter:blur(20px);
+
+border:2px solid gold;
+
+border-radius:20px;
+
+padding:20px;
+
+box-shadow:
+
+0 0 25px gold,
+
+0 0 50px rgba(255,204,0,.3);
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(-20px);
+
+transition:.4s;
+
+}
+
+.sub-menu.open{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+.user-info{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:15px;
+
+}
+
+.user-info img{
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+border:2px solid gold;
+
+}
+
+.user-info h3{
+
+color:gold;
+
+font-size:22px;
+
+}
+
+.sub-menu hr{
+
+border:none;
+
+height:2px;
+
+background:gold;
+
+margin:15px 0;
+
+}
+
+.sub-link{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:12px;
+
+text-decoration:none;
+
+color:white;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+.sub-link span{
+
+font-size:22px;
+
+}
+
+.sub-link:hover{
+
+background:gold;
+
+color:black;
+
+transform:translateX(8px);
+
+box-shadow:0 0 15px gold;
+
+}
+/* =====================================
+        USER PROFILE MENU
+===================================== */
+
+.user-menu{
+    position: fixed ;
+    top: 15px;
+    right: 25px;
+    z-index: 99999;
+}
+
+.user-pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid #FFD700;
+    box-shadow:
+        0 0 15px gold,
+        0 0 35px orange;
+    transition: .35s;
+}
+
+.user-pic:hover{
+    transform: scale(1.08);
+    box-shadow:
+        0 0 25px gold,
+        0 0 55px orange;
+}
+
+.sub-menu{
+    position: absolute;
+    top: 75px;
+    right: 0;
+
+    width: 300px;
+
+    background: rgba(15,15,15,.98);
+    backdrop-filter: blur(15px);
+
+    border: 2px solid gold;
+    border-radius: 18px;
+
+    overflow: solid;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+
+    transition: 0.5s  ease;
+
+    box-shadow:
+        0 0 25px gold,
+        0 0 60px rgba(255,215,0,.25);
+}
+
+.sub-menu.open{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.user-info img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    object-fit: cover;
+}
+
+.user-info h3{
+    color: gold;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.sub-menu hr{
+    border: none;
+    height: 1px;
+    background: rgba(255,215,0,.35);
+    margin: 0 15px;
+}
+
+.sub-link{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 16px 20px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.sub-link span{
+    font-size: 24px;
+    width: 30px;
+    text-align: center;
+}
+
+.sub-link p{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.sub-link:hover{
+    background: gold;
+    color: black;
+}
+
+.sub-link:hover span{
+    transform: scale(1.15);
+}
+
+.sub-link:last-child:hover{
+    background: #ff3b3b;
+    color: white;
+}
