@@ -151,3 +151,95 @@ const menu = document.getElementById("menu");
 btn.addEventListener("click", () => {
     menu.classList.toggle("show");
 });
+
+// ===============================
+// PREMIUM NAVBAR SCRIPT
+// ===============================
+
+// ---------- USER PROFILE ----------
+
+const userPic = document.getElementById("userPic");
+const subMenu = document.getElementById("subMenu");
+
+if (userPic && subMenu) {
+
+    userPic.addEventListener("click", function (e) {
+        e.stopPropagation();
+        subMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", function (e) {
+
+        if (!subMenu.contains(e.target) && !userPic.contains(e.target)) {
+            subMenu.classList.remove("open");
+        }
+
+    });
+
+}
+
+// ---------- SEARCH ----------
+
+const searchIcon = document.querySelector(".nav-icon");
+
+if(searchIcon){
+
+searchIcon.addEventListener("mouseenter",()=>{
+
+searchIcon.style.transform="scale(1.15) rotate(15deg)";
+
+});
+
+searchIcon.addEventListener("mouseleave",()=>{
+
+searchIcon.style.transform="scale(1)";
+
+});
+
+}
+
+// ---------- GOLD LOGO EFFECT ----------
+
+const logo=document.querySelector(".logo");
+
+if(logo){
+
+setInterval(()=>{
+
+logo.style.textShadow="0 0 20px gold";
+
+setTimeout(()=>{
+
+logo.style.textShadow="0 0 5px gold";
+
+},600);
+
+},2500);
+
+}
+
+// ---------- NOTIFICATION BELL ----------
+
+const bell=document.querySelectorAll(".nav-icon")[1];
+
+if(bell){
+
+setInterval(()=>{
+
+bell.style.transform="rotate(15deg)";
+
+setTimeout(()=>{
+
+bell.style.transform="rotate(-15deg)";
+
+},180);
+
+setTimeout(()=>{
+
+bell.style.transform="rotate(0deg)";
+
+},360);
+
+},4000);
+
+}
